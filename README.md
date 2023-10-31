@@ -11,6 +11,7 @@
 3. Once you confirm the API is working, you can start working on the workshop!
 
 ### 3. Your tasks
+0. Make a new branch with whatever title you want
 1. Create a new endpoint `GET /flights` that returns all of the flights in the database
 2. Create a new endpoint `POST /flights` that creates a new flight in the database
 3. Create a new endpoint `GET /flights/:id` that returns a flight with the given id
