@@ -1,59 +1,51 @@
-export interface Restaurant {
-  id: number;
-  name: string;
-  city: string;
-  price: number;
-  starRating: 1 | 2 | 3 | 4 | 5;
+export interface Flight {
+  flightNumber: string;
+  origin: string;
+  destination: string;
+  departureTime: string;
+  arrivalTime: string;
+  flightDuration: number;
 }
 
-export const restaurantsSeedData: Restaurant[] = [
+export const flightsSeedData: Flight[] = [
   {
-    id: 1,
-    name: "McDonalds",
-    city: "New York",
-    price: 1,
-    starRating: 1,
+    flightNumber: "BA001",
+    origin: "London",
+    destination: "New York",
+    departureTime: "2019-01-01T10:00:00Z",
+    arrivalTime: "2019-01-01T18:00:00Z",
+    flightDuration: 420,
   },
   {
-    id: 2,
-    name: "Burger King",
-    city: "New York",
-    price: 2,
-    starRating: 2,
+    flightNumber: "BA002",
+    origin: "New York",
+    destination: "London",
+    departureTime: "2019-01-01T19:00:00Z",
+    arrivalTime: "2019-01-02T03:00:00Z",
+    flightDuration: 420,
   },
   {
-    id: 3,
-    name: "Wendys",
-    city: "New York",
-    price: 3,
-    starRating: 3,
+    flightNumber: "BA003",
+    origin: "London",
+    destination: "Paris",
+    departureTime: "2019-01-01T10:00:00Z",
+    arrivalTime: "2019-01-01T12:00:00Z",
+    flightDuration: 120,
   },
   {
-    id: 4,
-    name: "Taco Bell",
-    city: "New York",
-    price: 4,
-    starRating: 4,
+    flightNumber: "BA004",
+    origin: "Paris",
+    destination: "London",
+    departureTime: "2019-01-01T13:00:00Z",
+    arrivalTime: "2019-01-01T15:00:00Z",
+    flightDuration: 120,
   },
   {
-    id: 5,
-    name: "Chick-fil-A",
-    city: "New York",
-    price: 5,
-    starRating: 5,
-  },
-  {
-    id: 6,
-    name: "KFC",
-    city: "New York",
-    price: 1,
-    starRating: 1,
-  },
-  {
-    id: 7,
-    name: "Popeyes",
-    city: "New York",
-    price: 2,
-    starRating: 2,
+    flightNumber: "BA005",
+    origin: "London",
+    destination: "Amsterdam",
+    departureTime: "2019-01-01T10:00:00Z",
+    arrivalTime: "2019-01-01T12:00:00Z",
+    flightDuration: 120,
   },
 ];
