@@ -14,7 +14,7 @@
 1. Create a new endpoint `GET /flights` that returns all of the flights in the database
 2. Create a new endpoint `POST /flights` that creates a new flight in the database
 3. Create a new endpoint `GET /flights/:id` that returns a flight with the given id
-4. Create a new endpoint `PUT /flights/:id` that updates a flight with the given id
+4. Create a new endpoint `PUT /flights/arrivalTime/:id` that updates a flight's arrivalTime
 5. Create a new endpoint `DELETE /flights/:id` that deletes a flight with the given id
 
 
