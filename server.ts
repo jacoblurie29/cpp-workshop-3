@@ -13,7 +13,7 @@ app.use(morgan("dev"));
 app.use(cors());
 
 // seed data
-let flights = flightsSeedData;
+let flights: Flight[] = flightsSeedData;
 
 app.get("/", (req, res) => {
   res.send({ message: "Hello World!" });
@@ -26,7 +26,7 @@ app.get("/flights", (req, res) => {
 
 //creates a new flight in the database 
 app.post("/flights", (req, res) => {
-  let flight = req.body;
+  let flight: Flight = req.body;
   flights.push(flight);
   res.send(flights);
 });
@@ -39,14 +39,14 @@ app.get("/flights/:id", (req, res) => {
 
 //update's a flight's arrival time 
 app.patch("/flights/arrivalTime/:id", (req, res) => {
-  let index = flights.findIndex(flight => flight.flightNumber === req.params.id);
+  let index: number = flights.findIndex(flight => flight.flightNumber === req.params.id);
   flights[index].arrivalTime = "updated";
   res.send(flights[index]);
 });
 
 //deletes a flight with a given id
 app.delete("/flights/:id", (req, res) => {
-  let index = flights.findIndex(flight => flight.flightNumber === req.params.id);
+  let index: number = flights.findIndex(flight => flight.flightNumber === req.params.id);
   flights.splice(index, 1);
   res.send(flights);
 });
