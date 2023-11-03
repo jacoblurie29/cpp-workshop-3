@@ -62,10 +62,10 @@ app.delete("/flights/:flightNumber", (req, res) => {
 
   Currently it is returning [] regardless of the input
 
-  The reason this doesn't work is because the predicate function is look for a returned true or false
-  for what ever you do in their. This bring the construction of functions in Typescript.
+  The reason this doesn't work is because the predicate function (the function in the filter function) is look for a returned true or false
+  for what ever you do in their. This brings up the topic the construction of functions in Typescript.
 
-  If a function has > 1 line you surround it with curly braces and explicitly write the word: return....
+  If the interior of a function has > 1 line you surround it with curly braces and explicitly write the word: 'return ...'
 
   For example:
 
@@ -74,9 +74,8 @@ app.delete("/flights/:flightNumber", (req, res) => {
     return flight.flightNumber != req.params.flightNumber;
   });
 
-  If the function has just one line, you can use parenthesis and the function will automatically assume
-  the result of the one line is the true or false comparison. For example:
-
+  If the interior of a function has just one line, you can use parenthesis and the function will automatically assume
+  the result of the one line is returned value. For example:
   
   let result = flights.filter((flight: Flight) => ( flight.flightNumber != req.params.flightNumber ));
 
