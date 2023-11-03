@@ -49,3 +49,5 @@ export const flightsSeedData: Flight[] = [
     flightDuration: 120,
   },
 ];
+
+
