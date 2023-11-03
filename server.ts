@@ -60,7 +60,7 @@ app.delete("/flights/:flightNumber", (req, res) => {
 
   /*
 
-  Current it is returning [] regardless of the input
+  Currently it is returning [] regardless of the input
 
   The reason this doesn't work is because the predicate function is look for a returned true or false
   for what ever you do in their. This bring the construction of functions in Typescript.
